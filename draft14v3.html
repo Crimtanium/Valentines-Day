@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <link rel="icon" type="image/x-icon" href="heartemoji.png">
+    <style>
+        body {
+            background-color: #ffc0cb;
+            font-family: 'Cursive', serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .letter-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+            margin: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s ease-in-out;
+        }
+        .letter-container:hover {
+            transform: scale(1.05);
+        }
+        .love-letter {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left;
+            padding: 0 15px;
+        }
+        .letter-container.open .love-letter {
+            max-height: 500px;
+            opacity: 1;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="letter-container" onclick="openLetter(this)">
+        <div class="love-letter">
+            <p>My Dearest Love,</p>
+            <p>From the moment our paths crossed, you have brought light and warmth into my life. Your laughter is my favorite melody, and your presence turns the ordinary into something extraordinary.</p>
+            <p>Every moment with you is a treasure, and I cherish every heartbeat we share. You are my dream, my heart, and my greatest love.</p>
+            <p>Forever yours,</p>
+            <p><em>Your Love</em></p>
+
+            <img src="happykittyfinalgif.gif" alt="Example GIF">
+        </div>
+    </div>
+
+    <script>
+        function openLetter(element) {
+            element.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
